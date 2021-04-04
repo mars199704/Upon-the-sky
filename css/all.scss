@@ -1,0 +1,351 @@
+$font-title: 'Playfair Display', serif;
+$color-h2:#2279aa;
+$color-p:#2279aa;
+$color-timeline: #eeefef;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.title{
+  font-family: $font-title;
+}
+
+header{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header.main{
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 100;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2a43;
+    mix-blend-mode: color;
+    z-index: 100;
+  }
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  h1{
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    font-size: 10rem;
+  }
+}
+
+.road{
+  z-index: 2;
+}
+
+.planetSection{
+  background-color: #f1f0ee;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15%;
+}
+
+.planetSection.left{
+  .article{
+    order: 2;
+  }
+  .picture{
+    order: 1px;
+  }
+}
+
+.article{
+  width: 50%;
+  padding:0 10%;
+  .quote{
+    width:8%;
+    height:8%;
+    margin: 0 0 -5% -10%;
+  }
+  h2{
+    font-size: 4rem;
+    color: $color-h2;
+    font-weight: 800;
+  }
+  p{
+    margin: 1rem 0;
+    color:$color-p;
+    text-align:justify;
+    font-size: .9rem;
+  }
+}
+
+.picture{
+  width: 50%;
+  display: flex;
+  .planet{
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+  }
+  .planetBackground{
+    width: 70%;
+    height: 70%;
+    margin-left: -20%;
+  }
+}
+
+nav{
+  position: relative;
+  .planetLine{
+    position: absolute;
+    background: #fff;
+    height: 10vh;
+    border-radius: 20px;
+    width: 70%;
+    z-index: 1000;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+    bottom: 10vh;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+  }
+}
+
+.planetLineTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p{
+    color: $color-h2;
+    font-size: 1.2rem;
+  }
+}
+
+.planetLinePlace{
+  display: flex;
+  align-items: center;
+}
+
+.line{
+  width: 95%;
+  height: 5%;
+  background-color: $color-timeline;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $color-timeline;
+  position: relative;
+  img{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.circle.sun{
+  img{
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+.circle.active:not(.sun), .circle:hover:not(.sun){
+  img{
+    display: block;
+    max-width: 300%;
+    max-height: 300%;
+  }
+}
+
+.line .saturn.active, .line .saturn:hover{
+  img{
+    display: block;
+    max-width: 430%;
+    max-height: 430%;
+  }
+}
+
+nav.lock .planetLine{
+  position: fixed;
+}
+
+.MercurySection{
+  .picture{
+    .Mercury{
+      position: relative;
+      left: 10%;
+    }
+  }
+}
+
+.VenusSection{
+  .picture{
+    .VenusBackground{
+      position: relative;
+      left: 20%;
+      top: 5vh;
+      width: 70%;
+      height: 70%;
+    }
+    .Venus{
+      position: relative;
+      width: 50%;
+      height: 50%;
+      top: -5vh;
+      left: -10%;
+    }
+  }
+}
+
+.EarthSection{
+  .picture{
+    .Earth{
+      position: relative;
+      width: 60%;
+      height: 60%;
+      top: -5vh;
+      left: 10%;
+    }
+  }
+}
+
+.MarsSection{
+  .picture{
+    .MarsBackground{
+      position: relative;
+      transform: rotateY(180deg);
+      left: 10%;
+    }
+    .Mars{
+      position: relative;
+      top: 10vh;
+      left: -20%;
+    }
+  }
+}
+
+.JupiterSection{
+  .picture{
+    .JupiterBackground{
+      position: relative;
+      transform: rotateY(180deg);
+      width: 55%;
+      height: 55%;
+      left: -50%;
+      top: -5vh;
+    }
+    .Jupiter{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 5vh;
+      left: -20%;
+    }
+  }
+}
+
+.SaturnSection{
+  .picture{
+    .SaturnBackground{
+      position: relative;
+      transform: rotateY(180deg);
+      left: 10%;
+      width: 70%;
+      height: 70%;
+    }
+    .Saturn{
+      position: relative;
+      transform: rotateY(180deg);
+      top: 10vh;
+      left: -40%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.UranusSection{
+  .picture{
+    .UranusBackground{
+      position: relative;
+      top: -10vh;
+    }
+    .Uranus{
+      position: relative;
+      left: 10%;
+    }
+  }
+}
+
+.NeptuneSection{
+  .picture{
+    .NeptuneBackground{
+      position: relative;
+      left: 20%;
+      width: 55%;
+      height: 55%;
+    }
+    .Neptune{
+      position: relative;
+      top: 13vh;
+      left: -10%;
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+#number{
+      font-size: 1000px;
+}
