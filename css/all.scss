@@ -107,6 +107,15 @@ header.main{
     text-align:justify;
     font-size: .9rem;
   }
+  .number{
+    display: flex;
+    p{
+      margin-right: 5rem;
+      font-size: 5rem;
+      color: $color-h2;
+      font-family: $font-title;
+    }
+  }
 }
 
 .picture{
@@ -336,16 +345,3 @@ nav.lock .planetLine{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-#number{
-      font-size: 1000px;
-}
