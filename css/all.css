@@ -135,8 +135,8 @@ header.main h1 {
 }
 
 .article .number p {
-  margin-right: 5rem;
-  font-size: 5rem;
+  margin-right: 10%;
+  font-size: 4rem;
   color: #2279aa;
   font-family: "Playfair Display", serif;
 }
