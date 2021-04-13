@@ -55,7 +55,7 @@ header.main::after {
 header.main img {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -135,10 +135,15 @@ header.main h1 {
 }
 
 .article .number p {
-  margin-right: 10%;
-  font-size: 4rem;
-  color: #2279aa;
-  font-family: "Playfair Display", serif;
+  padding: 10%;
+  font-size: 3rem;
+  color: #738183;
+  font-family: "Karla", sans-serif;
+}
+
+.article .number .km {
+  font-size: 1.5rem;
+  line-height: 4rem;
 }
 
 .picture {
@@ -201,7 +206,7 @@ nav .planetLine {
 
 .planetLineTitle p {
   color: #2279aa;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .planetLinePlace {

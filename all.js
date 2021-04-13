@@ -70,8 +70,8 @@ function switchClass(planet){
 
 function number(value, planet) {   
   var num = $(`#${planet}`);
-  num.animate({count: value}, {   
-    duration: 3000,
+  num.delay(2000).animate({count: value}, {   
+    duration: 2500,
     step: function() {   
       num.text(Math.round(this.count));   
     }   
@@ -176,9 +176,9 @@ function scrollMagic(tl,planet){
   //  scroll
   tl.from(planet, 1.5, {scale:15, opacity: 0.1})
   tl.to(planet, 1, {scale:1, opacity: 1})
-  tl.from(planet + 'Article', 1, {x:-200, opacity: 0}, "=-1")
+  tl.from(planet + 'Article', 1, {x:-400, opacity: 0}, "=-1")
   tl.to(planet + 'Article', 1, {x:0, opacity: 1})
-  tl.from(planet + 'Background', 1, {x:200, opacity: 0}, "=-2")
+  tl.from(planet + 'Background', 1, {x:400, opacity: 0}, "=-2")
   tl.to(planet + 'Background', 1, {x:0, opacity: 1})
 }
 
@@ -186,8 +186,8 @@ function scrollMagic2(tl,planet){
   //  scroll
   tl.from(planet, 1.5, {scale:15, opacity: 0.1})
   tl.to(planet, 1, {scale:1, opacity: 1})
-  tl.from(planet + 'Article', 1, {x:200, opacity: 0}, "=-1")
+  tl.from(planet + 'Article', 1, {x:400, opacity: 0}, "=-1")
   tl.to(planet + 'Article', 1, {x:0, opacity: 1})
-  tl.from(planet + 'Background', 1, {x:-200, opacity: 0}, "=-2")
+  tl.from(planet + 'Background', 1, {x:-400, opacity: 0}, "=-2")
   tl.to(planet + 'Background', 1, {x:0, opacity: 1})
 }
