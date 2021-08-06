@@ -1,23 +1,25 @@
-$font-title: 'Playfair Display', serif;
-$font-number:'Karla', sans-serif;
-$color-h2:#2279aa;
-$color-p:#2279aa;
+$font-title: "Playfair Display", serif;
+$font-number: "Karla", sans-serif;
+$color-h2: #2279aa;
+$color-p: #2279aa;
 $color-timeline: #eeefef;
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-.title{
+.title {
   font-family: $font-title;
 }
 
-header{
+header {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -27,9 +29,9 @@ header{
   align-items: center;
 }
 
-header.main{
-  &::before{
-    content: '';
+header.main {
+  &::before {
+    content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -37,8 +39,8 @@ header.main{
     background: linear-gradient(to top, #0a2a43, transparent);
     z-index: 100;
   }
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -47,7 +49,8 @@ header.main{
     mix-blend-mode: color;
     z-index: 100;
   }
-  img{
+  source,
+  img {
     position: absolute;
     top: 0;
     right: 0;
@@ -56,7 +59,7 @@ header.main{
     object-fit: cover;
     pointer-events: none;
   }
-  h1{
+  h1 {
     z-index: 1;
     position: relative;
     color: #fff;
@@ -64,11 +67,11 @@ header.main{
   }
 }
 
-.road{
+.road {
   z-index: 2;
 }
 
-.planetSection{
+.planetSection {
   background-color: #f1f0ee;
   position: relative;
   overflow: hidden;
@@ -80,67 +83,67 @@ header.main{
   padding: 0 15%;
 }
 
-.planetSection.left{
-  .article{
+.planetSection.left {
+  .article {
     order: 2;
   }
-  .picture{
+  .picture {
     order: 1px;
   }
 }
 
-.article{
+.article {
   width: 50%;
-  padding:0 10%;
-  .quote{
-    width:8%;
-    height:8%;
+  padding: 0 10%;
+  .quote {
+    width: 8%;
+    height: 8%;
     margin: 0 0 -5% -10%;
   }
-  h2{
+  h2 {
     font-size: 4rem;
     color: $color-h2;
     font-weight: 800;
   }
-  p{
+  p {
     margin: 1rem 0;
-    color:$color-p;
-    text-align:justify;
-    font-size: .9rem;
+    color: $color-p;
+    text-align: justify;
+    font-size: 0.9rem;
   }
-  .number{
+  .number {
     display: flex;
-    p{
+    p {
       padding: 10%;
       font-size: 3rem;
       color: #738183;
       font-family: $font-number;
     }
-    .km{
+    .km {
       font-size: 1.5rem;
       line-height: 4rem;
     }
   }
 }
 
-.picture{
+.picture {
   width: 50%;
   display: flex;
-  .planet{
+  .planet {
     width: 50%;
     height: 50%;
     z-index: 2;
   }
-  .planetBackground{
+  .planetBackground {
     width: 70%;
     height: 70%;
     margin-left: -20%;
   }
 }
 
-nav{
+nav {
   position: relative;
-  .planetLine{
+  .planetLine {
     position: absolute;
     background: #fff;
     height: 10vh;
@@ -156,23 +159,23 @@ nav{
   }
 }
 
-.planetLineTitle{
+.planetLineTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  p{
+  p {
     color: $color-h2;
     font-size: 1.5rem;
   }
 }
 
-.planetLinePlace{
+.planetLinePlace {
   display: flex;
   align-items: center;
 }
 
-.line{
+.line {
   width: 95%;
   height: 5%;
   background-color: $color-timeline;
@@ -181,13 +184,13 @@ nav{
   justify-content: space-between;
 }
 
-.circle{
+.circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: $color-timeline;
   position: relative;
-  img{
+  img {
     display: none;
     position: absolute;
     top: 50%;
@@ -196,53 +199,55 @@ nav{
   }
 }
 
-.circle.sun{
-  img{
+.circle.sun {
+  img {
     display: block;
     max-width: 100px;
     max-height: 100px;
   }
 }
 
-.circle.active:not(.sun), .circle:hover:not(.sun){
-  img{
+.circle.active:not(.sun),
+.circle:hover:not(.sun) {
+  img {
     display: block;
     max-width: 300%;
     max-height: 300%;
   }
 }
 
-.line .saturn.active, .line .saturn:hover{
-  img{
+.line .saturn.active,
+.line .saturn:hover {
+  img {
     display: block;
     max-width: 430%;
     max-height: 430%;
   }
 }
 
-nav.lock .planetLine{
+nav.lock .planetLine {
   position: fixed;
 }
 
-.MercurySection{
-  .picture{
-    .Mercury{
+.MercurySection {
+  .picture {
+    .Mercury {
       position: relative;
       left: 10%;
     }
   }
 }
 
-.VenusSection{
-  .picture{
-    .VenusBackground{
+.VenusSection {
+  .picture {
+    .VenusBackground {
       position: relative;
       left: 20%;
       top: 5vh;
       width: 70%;
       height: 70%;
     }
-    .Venus{
+    .Venus {
       position: relative;
       width: 50%;
       height: 50%;
@@ -252,9 +257,9 @@ nav.lock .planetLine{
   }
 }
 
-.EarthSection{
-  .picture{
-    .Earth{
+.EarthSection {
+  .picture {
+    .Earth {
       position: relative;
       width: 60%;
       height: 60%;
@@ -264,14 +269,14 @@ nav.lock .planetLine{
   }
 }
 
-.MarsSection{
-  .picture{
-    .MarsBackground{
+.MarsSection {
+  .picture {
+    .MarsBackground {
       position: relative;
       transform: rotateY(180deg);
       left: 10%;
     }
-    .Mars{
+    .Mars {
       position: relative;
       top: 10vh;
       left: -20%;
@@ -279,9 +284,9 @@ nav.lock .planetLine{
   }
 }
 
-.JupiterSection{
-  .picture{
-    .JupiterBackground{
+.JupiterSection {
+  .picture {
+    .JupiterBackground {
       position: relative;
       transform: rotateY(180deg);
       width: 55%;
@@ -289,7 +294,7 @@ nav.lock .planetLine{
       left: -50%;
       top: -5vh;
     }
-    .Jupiter{
+    .Jupiter {
       position: relative;
       width: 100%;
       height: 100%;
@@ -299,16 +304,16 @@ nav.lock .planetLine{
   }
 }
 
-.SaturnSection{
-  .picture{
-    .SaturnBackground{
+.SaturnSection {
+  .picture {
+    .SaturnBackground {
       position: relative;
       transform: rotateY(180deg);
       left: 10%;
       width: 70%;
       height: 70%;
     }
-    .Saturn{
+    .Saturn {
       position: relative;
       transform: rotateY(180deg);
       top: 10vh;
@@ -319,28 +324,28 @@ nav.lock .planetLine{
   }
 }
 
-.UranusSection{
-  .picture{
-    .UranusBackground{
+.UranusSection {
+  .picture {
+    .UranusBackground {
       position: relative;
       top: -10vh;
     }
-    .Uranus{
+    .Uranus {
       position: relative;
       left: 10%;
     }
   }
 }
 
-.NeptuneSection{
-  .picture{
-    .NeptuneBackground{
+.NeptuneSection {
+  .picture {
+    .NeptuneBackground {
       position: relative;
       left: 20%;
       width: 55%;
       height: 55%;
     }
-    .Neptune{
+    .Neptune {
       position: relative;
       top: 13vh;
       left: -10%;
