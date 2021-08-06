@@ -190,6 +190,7 @@ nav {
   border-radius: 50%;
   background-color: $color-timeline;
   position: relative;
+  source,
   img {
     display: none;
     position: absolute;
@@ -200,6 +201,7 @@ nav {
 }
 
 .circle.sun {
+  source,
   img {
     display: block;
     max-width: 100px;
@@ -209,6 +211,7 @@ nav {
 
 .circle.active:not(.sun),
 .circle:hover:not(.sun) {
+  source,
   img {
     display: block;
     max-width: 300%;
@@ -218,6 +221,7 @@ nav {
 
 .line .saturn.active,
 .line .saturn:hover {
+  source,
   img {
     display: block;
     max-width: 430%;

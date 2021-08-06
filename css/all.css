@@ -5,7 +5,9 @@
           box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -31,7 +33,7 @@ header {
 }
 
 header.main::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -42,7 +44,7 @@ header.main::before {
 }
 
 header.main::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -52,6 +54,7 @@ header.main::after {
   z-index: 100;
 }
 
+header.main source,
 header.main img {
   position: absolute;
   top: 0;
@@ -125,7 +128,7 @@ header.main h1 {
   margin: 1rem 0;
   color: #2279aa;
   text-align: justify;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .article .number {
@@ -241,6 +244,7 @@ nav .planetLine {
   position: relative;
 }
 
+.circle source,
 .circle img {
   display: none;
   position: absolute;
@@ -250,19 +254,26 @@ nav .planetLine {
           transform: translate(-50%, -50%);
 }
 
+.circle.sun source,
 .circle.sun img {
   display: block;
   max-width: 100px;
   max-height: 100px;
 }
 
-.circle.active:not(.sun) img, .circle:hover:not(.sun) img {
+.circle.active:not(.sun) source,
+.circle.active:not(.sun) img,
+.circle:hover:not(.sun) source,
+.circle:hover:not(.sun) img {
   display: block;
   max-width: 300%;
   max-height: 300%;
 }
 
-.line .saturn.active img, .line .saturn:hover img {
+.line .saturn.active source,
+.line .saturn.active img,
+.line .saturn:hover source,
+.line .saturn:hover img {
   display: block;
   max-width: 430%;
   max-height: 430%;
